@@ -1,0 +1,18 @@
+# Supabase project configuration (functions).
+# The project_id is a local label; `supabase link` sets the real remote ref.
+project_id = "freshcart"
+
+# create-payment-intent and delete-account require a signed-in caller, so JWT
+# verification stays ON (the default) — the functions also re-check the token.
+[functions.create-payment-intent]
+verify_jwt = true
+
+[functions.delete-account]
+verify_jwt = true
+
+# The Stripe webhook is called by Stripe's servers, which do not carry a
+# Supabase JWT. It MUST run with JWT verification OFF and authenticates via
+# the Stripe signature instead. Declaring it here makes the deploy
+# reproducible (no need to remember the --no-verify-jwt flag).
+[functions.stripe-webhook]
+verify_jwt = false

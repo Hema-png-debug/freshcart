@@ -1,0 +1,25 @@
+{
+  "name": "FreshCart — groceries, delivered fresh",
+  "short_name": "FreshCart",
+  "description": "Order groceries for fast local delivery.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f6ef",
+  "theme_color": "#157347",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

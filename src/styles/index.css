@@ -1,0 +1,94 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/bricolage-grotesque';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   FreshCart design tokens
+   Light: crisp market morning — white produce-crate surfaces on a pale
+   green-tinted ground. Dark: evergreen night. One accent: clementine.
+--------------------------------------------------------------------------- */
+
+:root {
+  --c-bg: #f2f6ef;
+  --c-surface: #ffffff;
+  --c-surface-2: #e8efe3;
+  --c-ink: #182420;
+  --c-muted: #5c6d62;
+  --c-line: #dde6d7;
+
+  --c-primary: #157347;
+  --c-primary-strong: #0f5c38;
+  --c-primary-soft: #dcefe3;
+  --c-on-primary: #ffffff;
+
+  --c-accent: #ee7112;
+  --c-accent-soft: #fdeada;
+
+  --c-danger: #cf4335;
+  --c-danger-soft: #fbe7e4;
+  --c-success: #157347;
+  --c-success-soft: #dcefe3;
+
+  color-scheme: light;
+}
+
+.dark {
+  --c-bg: #0d1411;
+  --c-surface: #16211b;
+  --c-surface-2: #1e2c24;
+  --c-ink: #e9f0ea;
+  --c-muted: #96a89c;
+  --c-line: #26362d;
+
+  --c-primary: #4cbd82;
+  --c-primary-strong: #63d197;
+  --c-primary-soft: #17301f;
+  --c-on-primary: #071710;
+
+  --c-accent: #ff8f3d;
+  --c-accent-soft: #33220f;
+
+  --c-danger: #ef6a5c;
+  --c-danger-soft: #351a17;
+  --c-success: #4cbd82;
+  --c-success-soft: #17301f;
+
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg font-body text-ink antialiased;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--c-primary);
+  color: var(--c-on-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
