@@ -1,4 +1,4 @@
-const lkr = new Intl.NumberFormat('en-GB', { style: 'currency', currency: '' })
+const lkr = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'LKR' })
 
 /** Format a price in the store currency. */
 export function formatPrice(value: number): string {
