@@ -1,8 +1,8 @@
-const gbp = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' })
+const lkr = new Intl.NumberFormat('en-GB', { style: 'currency', currency: '' })
 
 /** Format a price in the store currency. */
 export function formatPrice(value: number): string {
-  return gbp.format(value)
+  return lkr.format(value)
 }
 
 /** Whole-number percentage saved when a product is discounted. */
